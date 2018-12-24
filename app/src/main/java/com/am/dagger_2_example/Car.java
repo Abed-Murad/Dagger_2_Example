@@ -1,6 +1,9 @@
 package com.am.dagger_2_example;
 
+import android.util.Log;
+
 public class Car {
+    private static final String TAG = "Car";
 
     private Engine engine;
     private Wheels wheels;
@@ -10,5 +13,8 @@ public class Car {
         this.wheels = wheels;
     }
 
+    public void drive() {
+        Log.d(TAG, "driving ... ");
+    }
 
 }
