@@ -9,5 +9,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        // This is manual Dependency injection
+        Engine engine = new Engine();
+        Wheels wheels = new Wheels();
+
+        Car car = new Car(engine, wheels);
     }
 }
