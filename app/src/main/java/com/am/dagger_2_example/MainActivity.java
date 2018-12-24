@@ -10,11 +10,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        CarComponent component = DaggerCarComponent.create();
 
-        // This is manual Dependency injection
-        Engine engine = new Engine();
-        Wheels wheels = new Wheels();
+        Car car = component.getCar();
 
-        Car car = new Car(engine, wheels);
+        car.drive();
     }
 }
